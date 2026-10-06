@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f6f3">
+  <meta name="description" content="HEVENT - công nghệ chọn lọc, trải nghiệm khác biệt.">
+  <title>HEVENT | Đăng nhập</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="mobile.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <div class="announcement">Trải nghiệm công nghệ mới · Giao hàng miễn phí từ 5 triệu đồng</div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="HEVENT trang chủ">HEVENT<span>.</span></a>
+    <nav class="main-nav" aria-label="Điều hướng chính">
+      <a href="#catalog">Sản phẩm</a>
+      <a href="#catalog?category=Laptop">Laptop</a>
+      <a href="#catalog?category=Phụ kiện">Phụ kiện</a>
+      <a href="#support">Hỗ trợ</a>
+    </nav>
+    <form class="header-search" id="search-form" role="search">
+      <span aria-hidden="true">⌕</span>
+      <input id="search-input" placeholder="Tìm sản phẩm..." aria-label="Tìm sản phẩm">
+      <kbd>↵</kbd>
+    </form>
+    <div class="header-actions">
+      <button class="icon-button" id="account-link" title="Tài khoản" aria-label="Tài khoản">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="8" r="3.5" />
+          <path d="M4.5 20c.7-4 3.2-6 7.5-6s6.8 2 7.5 6" />
+        </svg>
+      </button>
+      <a class="icon-button cart-link" href="#cart" title="Giỏ hàng" aria-label="Giỏ hàng">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3.5 5h2l2 10.5h10.8l2-7.5H7" />
+          <circle cx="9.5" cy="19" r="1" />
+          <circle cx="17.5" cy="19" r="1" />
+        </svg>
+        <span id="cart-count">0</span>
+      </a>
+      <button class="menu-toggle icon-button" id="menu-toggle" title="Mở menu" aria-label="Mở menu">
+        <svg viewBox="0 0 24 24">
+          <path d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+      </button>
+    </div>
+  </header>
+  <main id="app"></main>
+  <footer class="site-footer" id="support">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a class="brand" href="#home">HEVENT<span>.</span></a>
+        <p>Công nghệ chọn lọc.<br>Thiết kế cho nhịp sống của bạn.</p>
+      </div>
+      <div>
+        <h3>Khám phá</h3>
+        <a href="#catalog">Tất cả sản phẩm</a>
+        <a href="#catalog?category=Laptop">Laptop</a>
+        <a href="#catalog?category=Phụ kiện">Phụ kiện</a>
+      </div>
+      <div>
+        <h3>Hỗ trợ</h3>
+        <a href="#account">Tài khoản của tôi</a>
+        <a href="#account">Tra cứu đơn hàng</a>
+        <a href="#support-request">Gửi yêu cầu hỗ trợ</a>
+      </div>
+      <div class="newsletter">
+        <h3>Ở lại cùng HEVENT</h3>
+        <p>Nhận tin mới và ưu đãi được chọn riêng cho bạn.</p>
+        <form id="newsletter-form">
+          <input type="email" placeholder="Email của bạn" aria-label="Email nhận tin" required>
+          <button aria-label="Đăng ký nhận tin">→</button>
+        </form>
+        <small id="newsletter-status"></small>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 HEVENT. Bảo lưu mọi quyền.</span>
+      <span>Thiết kế với sự quan tâm đến từng chi tiết.</span>
+    </div>
+  </footer>
+  <button class="chat-launcher" id="chat-launcher" aria-label="Mở trợ lý HEVENT">
+    <span class="chat-spark">✳</span>
+    <span>HEVENT AI</span>
+  </button>
+  <section class="chat-panel" id="chat-panel" aria-label="Trợ lý HEVENT" hidden>
+    <div class="chat-head">
+      <div class="chat-avatar">✳</div>
+      <div>
+        <strong>Trợ lý HEVENT</strong>
+        <small><i></i> Sẵn sàng tư vấn</small>
+      </div>
+      <button id="chat-close" class="icon-button" aria-label="Đóng chat">×</button>
+    </div>
+    <div class="chat-messages" id="chat-messages">
+      <div class="chat-day">HÔM NAY</div>
+      <div class="message assistant-message">Chào bạn! Mình có thể tìm laptop theo nhu cầu, so sánh cấu hình hoặc hướng dẫn đặt hàng. Bạn đang tìm gì nhỉ?</div>
+      <div class="chat-prompts">
+        <button data-prompt="Tư vấn laptop cho sinh viên">Laptop cho sinh viên</button>
+        <button data-prompt="So sánh laptop nổi bật">So sánh sản phẩm</button>
+        <button data-prompt="Hướng dẫn đặt hàng">Hướng dẫn mua hàng</button>
+      </div>
+    </div>
+    <form class="chat-compose" id="chat-form">
+      <input id="chat-input" placeholder="Nhắn cho HEVENT..." autocomplete="off" aria-label="Tin nhắn">
+      <button aria-label="Gửi tin nhắn">↑</button>
+    </form>
+    <button class="chat-ticket-link" id="ticket-open">Cần nhân viên hỗ trợ? Gửi yêu cầu →</button>
+  </section>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

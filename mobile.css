@@ -1,0 +1,21 @@
+@media (max-width: 700px) {
+  .header-search.search-open {
+    position: absolute;
+    left: 16px;
+    right: 122px;
+    width: auto;
+    min-width: 0;
+    height: 36px;
+    justify-content: flex-start;
+    padding: 0 9px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    z-index: 25;
+  }
+  .header-search.search-open input {
+    display: block;
+  }
+  .header-search.search-open kbd {
+    display: none;
+  }
+}
