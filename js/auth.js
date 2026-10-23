@@ -55,7 +55,7 @@ function renderAuth(mode='login') {
         go('account');
         return
       }
-      if(email==='admin@hevent.vn'&&data.password==='hevent2026') {
+      if(email==='admin@hevent.com'&&data.password==='heventadmin123') {
         currentUser= {
           name:'HEVENT Admin',
           email,

@@ -139,13 +139,6 @@ document.addEventListener('change',e=> {
   renderCatalog()
 }
 );
-document.querySelector('.header-search').addEventListener('click',e=> {
-  if(innerWidth>700||e.target.closest('input'))return;
-  e.preventDefault();
-  e.currentTarget.classList.add('search-open');
-  document.querySelector('#search-input').focus()
-}
-);
 document.querySelector('a[href="#support-request"]').onclick=e=> {
   e.preventDefault();
   document.querySelector('#chat-panel').hidden=false;

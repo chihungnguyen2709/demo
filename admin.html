@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f6f6f3">
+  <meta name="theme-color" content="#fbf9fc">
   <meta name="description" content="HEVENT - công nghệ chọn lọc, trải nghiệm khác biệt.">
   <title>HEVENT | Quản trị</title>
+  <script src="js/theme.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="mobile.css">
   <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="pastel-theme.css">
 </head>
 <body>
-  <div class="announcement">Trải nghiệm công nghệ mới · Giao hàng miễn phí từ 5 triệu đồng</div>
+  <div class="announcement">Sản phẩm chính hãng, xuất VAT đầy đủ · Giao hàng nhanh miễn phí từ 5 triệu đồng ·  Thu cũ giá ngon - Lên đời tiết kiệm</div>
   <header class="site-header">
     <a class="brand" href="#home" aria-label="HEVENT trang chủ">HEVENT<span>.</span></a>
     <nav class="main-nav" aria-label="Điều hướng chính">
@@ -24,11 +26,17 @@
       <a href="#support">Hỗ trợ</a>
     </nav>
     <form class="header-search" id="search-form" role="search">
-      <span aria-hidden="true">⌕</span>
+      <button class="search-toggle" id="search-toggle" type="button" aria-label="Mở tìm kiếm" aria-expanded="false" title="Tìm kiếm">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg>
+      </button>
       <input id="search-input" placeholder="Tìm sản phẩm..." aria-label="Tìm sản phẩm">
       <kbd>↵</kbd>
     </form>
     <div class="header-actions">
+      <button class="icon-button theme-toggle" id="theme-toggle" type="button" title="Chuyển sang giao diện tối" aria-label="Chuyển sang giao diện tối">
+        <svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.2A8.5 8.5 0 0 1 8.8 3.8 8.6 8.6 0 1 0 20.2 15.2Z" /></svg>
+        <svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" /></svg>
+      </button>
       <button class="icon-button" id="account-link" title="Tài khoản" aria-label="Tài khoản">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <circle cx="12" cy="8" r="3.5" />
@@ -55,7 +63,7 @@
     <div class="footer-main">
       <div class="footer-brand">
         <a class="brand" href="#home">HEVENT<span>.</span></a>
-        <p>Công nghệ chọn lọc.<br>Thiết kế cho nhịp sống của bạn.</p>
+        <p>Pro hơn hẳn.<br>Cho nhịp sống của bạn.</p>
       </div>
       <div>
         <h3>Khám phá</h3>
@@ -70,7 +78,7 @@
         <a href="#support-request">Gửi yêu cầu hỗ trợ</a>
       </div>
       <div class="newsletter">
-        <h3>Ở lại cùng HEVENT</h3>
+        <h3>HEVENT</h3>
         <p>Nhận tin mới và ưu đãi được chọn riêng cho bạn.</p>
         <form id="newsletter-form">
           <input type="email" placeholder="Email của bạn" aria-label="Email nhận tin" required>
@@ -80,8 +88,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 HEVENT. Bảo lưu mọi quyền.</span>
-      <span>Thiết kế với sự quan tâm đến từng chi tiết.</span>
+      <span>© 2027 HEVENT &amp; Hùng Nguyễn. Bảo lưu mọi quyền.</span>
+      <span>Thiết kế được truyền cảm hứng bởi Thủy Linh.</span>
     </div>
   </footer>
   <button class="chat-launcher" id="chat-launcher" aria-label="Mở trợ lý HEVENT">

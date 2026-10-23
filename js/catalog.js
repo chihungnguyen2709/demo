@@ -15,31 +15,30 @@ function renderCatalog() {
   </div>
   </div>
   <aside class="catalog-side">
-  <div class="filter-group">
-  <h3>Danh mục</h3>${['','Laptop',...categoryList.slice(1),'Phụ kiện'].map(c=>`<label class="filter-option">
+  <div class="filter-group filter-rail">
+  <h3>Danh mục</h3><div class="filter-options">${['','Laptop',...categoryList.slice(1),'Phụ kiện'].map(c=>`<label class="filter-option ${catalogFilters.category===c?'is-selected':''}">
   <input type="radio" name="category" value="${escapeHtml(c)}" ${
     catalogFilters.category===c?'checked':''
   }
-  > ${
+  > <span class="filter-label">${
     c||'Tất cả'
-  }
-  <span>${
+  }</span><span class="filter-count">${
     c?products.filter(p=>p.category===c||c==='Phụ kiện'&&p.category!=='Laptop').length:products.length
   }
   </span>
-  </label>`).join('')}</div>
-  <div class="filter-group">
-  <h3>Thương hiệu</h3>${brands.map(b=>`<label class="filter-option">
+  </label>`).join('')}</div></div>
+  <div class="filter-group filter-rail">
+  <h3>Thương hiệu</h3><div class="filter-options">${brands.map(b=>`<label class="filter-option ${catalogFilters.brand===b?'is-selected':''}">
   <input type="radio" name="brand" value="${escapeHtml(b)}" ${
     catalogFilters.brand===b?'checked':''
   }
-  > ${
+  > <span class="filter-label">${
     escapeHtml(b)
-  }
-  </label>`).join('')}<label class="filter-option">
-  <input type="radio" name="brand" value="" ${!catalogFilters.brand?'checked':''}> Tất cả hãng</label>
+  }</span>
+  </label>`).join('')}<label class="filter-option ${!catalogFilters.brand?'is-selected':''}">
+  <input type="radio" name="brand" value="" ${!catalogFilters.brand?'checked':''}> <span class="filter-label">Tất cả hãng</span></label></div>
   </div>
-  <div class="filter-group">
+  <div class="filter-group filter-price">
   <h3>Khoảng giá tối đa</h3>
   <div class="range-wrap">
   <input id="price-range" type="range" min="1000000" max="50000000" step="1000000" value="${catalogFilters.maxPrice}">

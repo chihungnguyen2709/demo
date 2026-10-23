@@ -8,8 +8,8 @@
   --green: #1d4739;
   --orange: #ed7553;
   --blue: #dce9f0;
-  --font: 'DM Sans',sans-serif;
-  --display: 'Manrope',sans-serif
+  --font: "DM Sans", -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  --display: "Manrope", "DM Sans", -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif
 }
 * {
   box-sizing: border-box
@@ -95,10 +95,25 @@ button {
   min-width: 210px;
   background: rgba(255,255,255,.55)
 }
-.header-search>span {
-  font-size: 21px;
-  line-height: 1;
-  color: #788078
+.search-toggle {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #788078;
+  cursor: pointer
+}
+.search-toggle svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round
 }
 .header-search input {
   width: 100%;
@@ -846,14 +861,18 @@ h1,h2,h3,p {
   gap: 9px
 }
 .color-dot {
-  border: 1px solid #dfe2de;
-  background: white;
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--ink);
   padding: 5px 9px;
   font-size: 10px;
   cursor: pointer
 }
 .color-dot.active {
-  border-color: #445f43
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(116,98,130,.12)
 }
 .detail-actions {
   display: flex;
@@ -1142,9 +1161,11 @@ h1,h2,h3,p {
   gap: 34px
 }
 .account-nav {
-  background: white;
+  background: var(--white);
   padding: 13px;
-  height: max-content
+  height: max-content;
+  border: 1px solid var(--line);
+  border-radius: 6px
 }
 .account-nav button {
   width: 100%;
@@ -1162,8 +1183,10 @@ h1,h2,h3,p {
   font-weight: 600
 }
 .account-panel {
-  background: white;
-  padding: 27px
+  background: var(--white);
+  padding: 27px;
+  border: 1px solid var(--line);
+  border-radius: 6px
 }
 .account-panel h2 {
   font: 600 16px var(--display)
@@ -1264,7 +1287,8 @@ h1,h2,h3,p {
 }
 .admin-stat {
   padding: 16px;
-  background: white
+  background: var(--white);
+  border: 1px solid var(--line)
 }
 .admin-stat small {
   font-size: 9px;
@@ -1280,8 +1304,10 @@ h1,h2,h3,p {
   color: #64804f
 }
 .admin-table-wrap {
-  background: white;
-  overflow: auto
+  background: var(--white);
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 6px
 }
 .admin-toolbar {
   display: flex;
@@ -1331,7 +1357,8 @@ h1,h2,h3,p {
 }
 .admin-select {
   border: 1px solid var(--line);
-  background: white;
+  background: var(--white);
+  color: var(--ink);
   padding: 7px;
   font-size: 9px
 }
@@ -1341,15 +1368,18 @@ h1,h2,h3,p {
   gap: 12px
 }
 .admin-category {
-  background: white;
-  padding: 18px
+  background: var(--white);
+  color: var(--ink);
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 6px
 }
 .admin-category strong {
   font: 600 13px var(--display)
 }
 .admin-category span {
   display: block;
-  color: #7a837a;
+  color: var(--muted);
   font-size: 10px;
   margin-top: 7px
 }
@@ -1363,7 +1393,10 @@ h1,h2,h3,p {
   padding: 20px
 }
 .modal {
-  background: white;
+  background: var(--white);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 6px;
   width: min(560px,100%);
   max-height: 90vh;
   overflow: auto;
@@ -1399,7 +1432,10 @@ h1,h2,h3,p {
 .compare-product {
   text-align: center;
   padding: 12px;
-  background: #f5f6f3
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 4px
 }
 .compare-product img {
   width: 100%;
@@ -1712,9 +1748,6 @@ h1,h2,h3,p {
   }
   .header-search input,.header-search kbd {
     display: none
-  }
-  .header-search>span {
-    font-size: 23px
   }
   .header-actions {
     gap: 5px

@@ -20,11 +20,13 @@
 - `styles.css`: giao diện dùng chung, bố cục, thành phần sản phẩm và chatbot.
 - `mobile.css`: các điều chỉnh cho màn hình nhỏ.
 - `admin.css`: các quy tắc riêng cho trang quản trị.
+- `pastel-theme.css`: bảng màu pastel dùng chung và bố cục hero tràn ngang, được nạp sau các stylesheet còn lại.
 
 ## JavaScript
 
 - `app.js` ở thư mục gốc: nạp lần lượt các module JavaScript theo trang.
 - `js/shared.js`: dữ liệu demo, trạng thái lưu trong trình duyệt và hàm dùng chung.
+- `js/theme.js`: khôi phục giao diện sáng/tối đã chọn trước khi nội dung hiển thị.
 - `js/app.js`: khởi tạo ứng dụng và các thành phần dùng chung.
 - `js/home.js`: nội dung và tương tác trang chủ.
 - `js/catalog.js`: danh mục, tìm kiếm và lọc sản phẩm.

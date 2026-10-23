@@ -7,7 +7,7 @@ function renderAdmin() {
   const totalRevenue=orders.filter(o=>o.status==='Đã giao').reduce((s,o)=>s+o.total,0);
   app.innerHTML=`<section class="admin-shell">
   <aside class="admin-side">
-  <a class="brand" href="#home">HEVENT<span style="color:#ed7553">.</span>
+  <a class="brand" href="#home">HEVENT<span class="brand-dot">.</span>
   </a>
   <small>WORKSPACE</small>
   <button data-admin="overview" class="${adminTab==='overview'?'active':''}">▦　Tổng quan</button>
